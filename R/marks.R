@@ -7,7 +7,7 @@
 #' @keywords internal
 .mark_env <- new.env(parent = emptyenv())
 .mark_env$marks <- list()
-.mark_env$label <- "\u2729 MARK"  # Default label: " MARK"
+.mark_env$label <- "🌟 MARK"  # Default label: " MARK"
 
 #' Add a visual mark at the current line
 #'
@@ -25,13 +25,12 @@ add_mark_generic <- function(number) {
 
   .mark_env$marks[[as.character(number)]] <- list(file = file, line = line)
 
-  # Get current label
   label <- .mark_env$label
   mark_text <- paste0("# ", label, " ", number)
-  mark_pattern <- paste0("^# ", label, " ", number, "$")
+  mark_pattern <- paste0("# ", label, " ", number)
 
   lines <- ctx$contents
-  new_lines <- lines[!grepl(mark_pattern, lines)]
+  new_lines <- lines[!grepl(mark_pattern, lines, fixed = TRUE)]
 
   insert_pos <- min(line, length(new_lines) + 1)
   new_lines <- append(new_lines, mark_text, after = insert_pos - 1)
@@ -83,14 +82,17 @@ clean_all_marks <- function() {
   col <- ctx$selection[[1]]$range$start["column"]
 
   label <- .mark_env$label
-  pattern <- paste0("^# ", label, " [0-9]$")
+  # We'll match any mark from 0-9 using a loop and fixed matching
+  patterns <- paste0("# ", label, " ", 0:9)
 
-  new_lines <- lines[!grepl(pattern, lines)]
+  keep <- !vapply(lines, function(l) any(startsWith(l, patterns)), logical(1))
+  new_lines <- lines[keep]
 
   rstudioapi::setDocumentContents(paste(new_lines, collapse = "\n"))
   rstudioapi::setCursorPosition(rstudioapi::document_position(line, col))
   .mark_env$marks <- list()
 }
+
 
 
 #' @keywords internal
@@ -136,12 +138,14 @@ remove_mark_prompt <- function() {
   ctx <- rstudioapi::getActiveDocumentContext()
   lines <- ctx$contents
   label <- .mark_env$label
-  mark_pattern <- paste0("^# ", label, " ", number, "$")
-  new_lines <- lines[!grepl(mark_pattern, lines)]
+  mark_pattern <- paste0("# ", label, " ", number)
+
+  new_lines <- lines[!grepl(mark_pattern, lines, fixed = TRUE)]
 
   rstudioapi::setDocumentContents(paste(new_lines, collapse = "\n"))
   .mark_env$marks[[as.character(number)]] <- NULL
 }
+
 
 
 #' @export
