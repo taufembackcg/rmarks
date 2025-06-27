@@ -23,12 +23,18 @@ devtools::install("path/to/rmarks")
 devtools::install_github("taufembackcg/rmarks")
 ```
 
----
-
-## Use
-
 - Please reboot RStudio after install.
 - Then go to RStudio: Tools > Modify Keyboard Shortcuts and add your shortcuts.
 - Below you can find some suggestions.
 
 ![Shortcut Suggestions](man/figures/shortcuts.png)
+
+---
+
+## Use
+
+- Below you can see an example with 2 markers and the option to delete one of those.
+- You can set a shortcut to delete only one, as well another to delete all of them.
+- You can also change the marker's text.
+
+![Shortcut Suggestions](man/figures/example.png)
