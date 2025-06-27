@@ -1,0 +1,114 @@
+Name: Set Mark 0
+Description: Set mark 0 at current line
+Binding: add_mark_0
+Interactive: false
+
+Name: Go to Mark 0
+Description: Jump to mark 0
+Binding: goto_mark_0
+Interactive: false
+
+Name: Set Mark 1
+Description: Set mark 1 at current line
+Binding: add_mark_1
+Interactive: false
+
+Name: Go to Mark 1
+Description: Jump to mark 1
+Binding: goto_mark_1
+Interactive: false
+
+Name: Set Mark 2
+Description: Set mark 2 at current line
+Binding: add_mark_2
+Interactive: false
+
+Name: Go to Mark 2
+Description: Jump to mark 2
+Binding: goto_mark_2
+Interactive: false
+
+Name: Set Mark 3
+Description: Set mark 3 at current line
+Binding: add_mark_3
+Interactive: false
+
+Name: Go to Mark 3
+Description: Jump to mark 3
+Binding: goto_mark_3
+Interactive: false
+
+Name: Set Mark 4
+Description: Set mark 4 at current line
+Binding: add_mark_4
+Interactive: false
+
+Name: Go to Mark 4
+Description: Jump to mark 4
+Binding: goto_mark_4
+Interactive: false
+
+Name: Set Mark 5
+Description: Set mark 5 at current line
+Binding: add_mark_5
+Interactive: false
+
+Name: Go to Mark 5
+Description: Jump to mark 5
+Binding: goto_mark_5
+Interactive: false
+
+Name: Set Mark 6
+Description: Set mark 6 at current line
+Binding: add_mark_6
+Interactive: false
+
+Name: Go to Mark 6
+Description: Jump to mark 6
+Binding: goto_mark_6
+Interactive: false
+
+Name: Set Mark 7
+Description: Set mark 7 at current line
+Binding: add_mark_7
+Interactive: false
+
+Name: Go to Mark 7
+Description: Jump to mark 7
+Binding: goto_mark_7
+Interactive: false
+
+Name: Set Mark 8
+Description: Set mark 8 at current line
+Binding: add_mark_8
+Interactive: false
+
+Name: Go to Mark 8
+Description: Jump to mark 8
+Binding: goto_mark_8
+Interactive: false
+
+Name: Set Mark 9
+Description: Set mark 9 at current line
+Binding: add_mark_9
+Interactive: false
+
+Name: Go to Mark 9
+Description: Jump to mark 9
+Binding: goto_mark_9
+Interactive: false
+
+Name: Clean All Marks
+Description: Remove all MARK comments
+Binding: clean_all_marks
+Interactive: false
+
+Name: Remove Specific Mark
+Description: Remove a mark (0-9) by number
+Binding: remove_mark_prompt
+Interactive: true
+
+Name: Set Mark Label
+Description: Change the default text used in visual marks
+Binding: set_mark_label
+Interactive: true

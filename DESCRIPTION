@@ -1,0 +1,11 @@
+Package: rmarks
+Title: RStudio Marks Addin for mark and jump to lines of code using keyboard shortcuts
+Version: 0.0.0.9000
+Authors@R: 
+    person("Cleiton Guollo", "Taufemback", email = "taufemback.cg@gmail.com", role = c("aut", "cre"))
+Description: Add marks (0-9), jump to them, and clean all marks with visual comments.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: rstudioapi
