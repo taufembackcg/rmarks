@@ -20,14 +20,14 @@
 devtools::install("path/to/rmarks")
 
 # From GitHub (if available)
-devtools::install_github("yourusername/rmarks")
+devtools::install_github("taufembackcg/rmarks")
 ```
 
 ---
 
 ## Use
 
-- Please reboot after install.
+- Please reboot RStudio after install.
 - Then go to RStudio: Tools > Modify Keyboard Shortcuts and add your shortcuts.
 - Below you can find some suggestions.
 
