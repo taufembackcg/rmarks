@@ -25,7 +25,7 @@ devtools::install_github("taufembackcg/rmarks")
 
 - Please reboot RStudio after install.
 - Then go to RStudio: Tools > Modify Keyboard Shortcuts and add your shortcuts.
-- Below you can find some suggestions.
+- Below you can find some keyboard shorcuts suggestions.
 
 ![Shortcut Suggestions](man/figures/shortcuts.png)
 
